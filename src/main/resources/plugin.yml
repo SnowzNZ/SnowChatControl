@@ -1,3 +1,37 @@
-name: MuteChat
+name: SnowChatControl
 version: '${project.version}'
-main: dev.snowz.mutechat.MuteChat
+main: dev.snowz.snowchatcontrol.SnowChatControl
+commands:
+  snowchatcontrol:
+    description: Main command for SnowChatControl
+    usage: /snowchatcontrol
+    permission: snowchatcontrol.admin
+    aliases:
+      - scc
+  mutechat:
+    description: Mute the chat
+    usage: /mutechat
+    permission: snowchatcontrol.mutechat
+  unmutechat:
+    description: Unmute the chat
+    usage: /unmutechat
+    permission: snowchatcontrol.unmutechat
+permissions:
+  snowchatcontrol.admin:
+    description: Allows the player to use admin SnowChatControl commands
+    default: op
+  snowchatcontrol.mutechat:
+    description: Allows the player to mute the chat
+    default: op
+  snowchatcontrol.unmutechat:
+    description: Allows the player to unmute the chat
+    default: op
+  snowchatcontrol.bypass.mutechat:
+    description: Allows the player to bypass the chat mute
+    default: op
+  snowchatcontrol.notify.mutechat:
+    description: Allows the player to receive a notification when the chat is muted
+    default: op
+  snowchatcontrol.notify.unmutechat:
+    description: Allows the player to receive a notification when the chat is unmuted
+    default: op
